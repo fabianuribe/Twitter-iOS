@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="TweetCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f4r-YK-d9X">
+                        <rect key="frame" x="8" y="8" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="97o-4f-9GW"/>
+                            <constraint firstAttribute="width" constant="65" id="jJa-69-QJh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fabian Uribe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcw-bY-z0g">
+                        <rect key="frame" x="81" y="8" width="84" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@fabianuribe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-eC-hbb">
+                        <rect key="frame" x="170" y="8" width="78" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpU-A8-aBB">
+                        <rect key="frame" x="292" y="8" width="20" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="sO4-Ue-1qI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La vida es una tombola tom tom tombola" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgK-wa-cjh">
+                        <rect key="frame" x="81" y="30" width="231" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="f4r-YK-d9X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="1WX-jP-Lqz"/>
+                    <constraint firstItem="rcw-bY-z0g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1Xv-uJ-98O"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TgK-wa-cjh" secondAttribute="bottom" constant="8" id="9Ar-gd-sel"/>
+                    <constraint firstAttribute="trailing" secondItem="TgK-wa-cjh" secondAttribute="trailing" constant="8" id="B71-8V-6Td"/>
+                    <constraint firstAttribute="trailing" secondItem="7rn-eC-hbb" secondAttribute="trailing" constant="8" id="Bam-yW-cNQ"/>
+                    <constraint firstItem="rcw-bY-z0g" firstAttribute="leading" secondItem="f4r-YK-d9X" secondAttribute="trailing" constant="8" id="CvE-bw-e8p"/>
+                    <constraint firstItem="f4r-YK-d9X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HOT-A3-UE0"/>
+                    <constraint firstAttribute="trailing" secondItem="zpU-A8-aBB" secondAttribute="trailing" constant="8" id="IJ3-AP-JT8"/>
+                    <constraint firstItem="zpU-A8-aBB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aMY-z7-B1Z"/>
+                    <constraint firstItem="rcw-bY-z0g" firstAttribute="leading" secondItem="f4r-YK-d9X" secondAttribute="trailing" constant="8" id="dNH-To-Hzx"/>
+                    <constraint firstItem="zpU-A8-aBB" firstAttribute="leading" secondItem="rcw-bY-z0g" secondAttribute="trailing" constant="8" id="ha5-DU-1Zg"/>
+                    <constraint firstItem="7rn-eC-hbb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="he1-OK-ioP"/>
+                    <constraint firstItem="f4r-YK-d9X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="iem-6b-j8P"/>
+                    <constraint firstItem="TgK-wa-cjh" firstAttribute="leading" secondItem="f4r-YK-d9X" secondAttribute="trailing" constant="8" id="kKB-Hy-ecC"/>
+                    <constraint firstItem="TgK-wa-cjh" firstAttribute="top" secondItem="rcw-bY-z0g" secondAttribute="bottom" constant="5" id="nUH-QB-kqs"/>
+                    <constraint firstItem="zpU-A8-aBB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7rn-eC-hbb" secondAttribute="trailing" constant="5" id="r6T-fe-7cX"/>
+                    <constraint firstItem="f4r-YK-d9X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="vIp-We-BRU"/>
+                    <constraint firstItem="TgK-wa-cjh" firstAttribute="top" secondItem="rcw-bY-z0g" secondAttribute="bottom" constant="5" id="w8x-uV-toR"/>
+                    <constraint firstItem="7rn-eC-hbb" firstAttribute="leading" secondItem="rcw-bY-z0g" secondAttribute="trailing" constant="5" id="y6B-h4-JM2"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="iem-6b-j8P"/>
+                        <exclude reference="vIp-We-BRU"/>
+                        <exclude reference="CvE-bw-e8p"/>
+                        <exclude reference="w8x-uV-toR"/>
+                        <exclude reference="Bam-yW-cNQ"/>
+                        <exclude reference="ha5-DU-1Zg"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImage" destination="f4r-YK-d9X" id="bNq-hk-jMP"/>
+                <outlet property="messageLabel" destination="TgK-wa-cjh" id="WwC-b4-gql"/>
+                <outlet property="nameLabel" destination="rcw-bY-z0g" id="tu2-bs-I2Y"/>
+                <outlet property="timeStampLabel" destination="zpU-A8-aBB" id="bAv-8E-ndd"/>
+                <outlet property="userNameLabel" destination="7rn-eC-hbb" id="qKD-fB-aM6"/>
+            </connections>
+            <point key="canvasLocation" x="553" y="428.5"/>
+        </tableViewCell>
+    </objects>
+</document>

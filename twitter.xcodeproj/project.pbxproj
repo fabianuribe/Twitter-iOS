@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		D6C4DC0D1A8488E200C94FA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC0C1A8488E200C94FA3 /* main.m */; };
 		D6C4DC101A8488E200C94FA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC0F1A8488E200C94FA3 /* AppDelegate.m */; };
-		D6C4DC131A8488E200C94FA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC121A8488E200C94FA3 /* ViewController.m */; };
-		D6C4DC161A8488E200C94FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC141A8488E200C94FA3 /* Main.storyboard */; };
 		D6C4DC181A8488E200C94FA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC171A8488E200C94FA3 /* Images.xcassets */; };
 		D6C4DC1B1A8488E200C94FA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC191A8488E200C94FA3 /* LaunchScreen.xib */; };
 		D6C4DC271A8488E200C94FA3 /* twitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC261A8488E200C94FA3 /* twitterTests.m */; };
+		D6C4DC331A84896E00C94FA3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC311A84896E00C94FA3 /* MainViewController.m */; };
+		D6C4DC341A84896E00C94FA3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC321A84896E00C94FA3 /* MainViewController.xib */; };
+		D6C4DC381A848D0600C94FA3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC361A848D0600C94FA3 /* LoginViewController.m */; };
+		D6C4DC391A848D0600C94FA3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC371A848D0600C94FA3 /* LoginViewController.xib */; };
+		D6C4DC3D1A84949300C94FA3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC3B1A84949300C94FA3 /* DetailViewController.m */; };
+		D6C4DC3E1A84949300C94FA3 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC3C1A84949300C94FA3 /* DetailViewController.xib */; };
+		D6C4DC421A8494B400C94FA3 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC401A8494B400C94FA3 /* ComposeViewController.m */; };
+		D6C4DC431A8494B400C94FA3 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC411A8494B400C94FA3 /* ComposeViewController.xib */; };
+		D6C4DC471A8494E100C94FA3 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC451A8494E100C94FA3 /* TweetCell.m */; };
+		D6C4DC481A8494E100C94FA3 /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC461A8494E100C94FA3 /* TweetCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +40,26 @@
 		D6C4DC0C1A8488E200C94FA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6C4DC0E1A8488E200C94FA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6C4DC0F1A8488E200C94FA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D6C4DC111A8488E200C94FA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D6C4DC121A8488E200C94FA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D6C4DC151A8488E200C94FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6C4DC171A8488E200C94FA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D6C4DC1A1A8488E200C94FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D6C4DC201A8488E200C94FA3 /* twitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C4DC251A8488E200C94FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6C4DC261A8488E200C94FA3 /* twitterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twitterTests.m; sourceTree = "<group>"; };
+		D6C4DC301A84896E00C94FA3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D6C4DC311A84896E00C94FA3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D6C4DC321A84896E00C94FA3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D6C4DC351A848D0600C94FA3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D6C4DC361A848D0600C94FA3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D6C4DC371A848D0600C94FA3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D6C4DC3A1A84949300C94FA3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D6C4DC3B1A84949300C94FA3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D6C4DC3C1A84949300C94FA3 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		D6C4DC3F1A8494B400C94FA3 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		D6C4DC401A8494B400C94FA3 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		D6C4DC411A8494B400C94FA3 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		D6C4DC441A8494E000C94FA3 /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
+		D6C4DC451A8494E100C94FA3 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
+		D6C4DC461A8494E100C94FA3 /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +103,24 @@
 			children = (
 				D6C4DC0E1A8488E200C94FA3 /* AppDelegate.h */,
 				D6C4DC0F1A8488E200C94FA3 /* AppDelegate.m */,
-				D6C4DC111A8488E200C94FA3 /* ViewController.h */,
-				D6C4DC121A8488E200C94FA3 /* ViewController.m */,
-				D6C4DC141A8488E200C94FA3 /* Main.storyboard */,
 				D6C4DC171A8488E200C94FA3 /* Images.xcassets */,
 				D6C4DC191A8488E200C94FA3 /* LaunchScreen.xib */,
 				D6C4DC0A1A8488E200C94FA3 /* Supporting Files */,
+				D6C4DC301A84896E00C94FA3 /* MainViewController.h */,
+				D6C4DC311A84896E00C94FA3 /* MainViewController.m */,
+				D6C4DC321A84896E00C94FA3 /* MainViewController.xib */,
+				D6C4DC351A848D0600C94FA3 /* LoginViewController.h */,
+				D6C4DC361A848D0600C94FA3 /* LoginViewController.m */,
+				D6C4DC371A848D0600C94FA3 /* LoginViewController.xib */,
+				D6C4DC3A1A84949300C94FA3 /* DetailViewController.h */,
+				D6C4DC3B1A84949300C94FA3 /* DetailViewController.m */,
+				D6C4DC3C1A84949300C94FA3 /* DetailViewController.xib */,
+				D6C4DC3F1A8494B400C94FA3 /* ComposeViewController.h */,
+				D6C4DC401A8494B400C94FA3 /* ComposeViewController.m */,
+				D6C4DC411A8494B400C94FA3 /* ComposeViewController.xib */,
+				D6C4DC441A8494E000C94FA3 /* TweetCell.h */,
+				D6C4DC451A8494E100C94FA3 /* TweetCell.m */,
+				D6C4DC461A8494E100C94FA3 /* TweetCell.xib */,
 			);
 			path = twitter;
 			sourceTree = "<group>";
@@ -199,8 +231,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C4DC161A8488E200C94FA3 /* Main.storyboard in Resources */,
+				D6C4DC391A848D0600C94FA3 /* LoginViewController.xib in Resources */,
+				D6C4DC431A8494B400C94FA3 /* ComposeViewController.xib in Resources */,
 				D6C4DC1B1A8488E200C94FA3 /* LaunchScreen.xib in Resources */,
+				D6C4DC481A8494E100C94FA3 /* TweetCell.xib in Resources */,
+				D6C4DC3E1A84949300C94FA3 /* DetailViewController.xib in Resources */,
+				D6C4DC341A84896E00C94FA3 /* MainViewController.xib in Resources */,
 				D6C4DC181A8488E200C94FA3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C4DC131A8488E200C94FA3 /* ViewController.m in Sources */,
+				D6C4DC3D1A84949300C94FA3 /* DetailViewController.m in Sources */,
+				D6C4DC381A848D0600C94FA3 /* LoginViewController.m in Sources */,
 				D6C4DC101A8488E200C94FA3 /* AppDelegate.m in Sources */,
+				D6C4DC421A8494B400C94FA3 /* ComposeViewController.m in Sources */,
+				D6C4DC331A84896E00C94FA3 /* MainViewController.m in Sources */,
 				D6C4DC0D1A8488E200C94FA3 /* main.m in Sources */,
+				D6C4DC471A8494E100C94FA3 /* TweetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +284,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D6C4DC141A8488E200C94FA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6C4DC151A8488E200C94FA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D6C4DC191A8488E200C94FA3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
