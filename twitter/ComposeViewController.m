@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelBtn)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onApplyBtn)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +36,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (void) onCancelBtn {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) onApplyBtn {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
