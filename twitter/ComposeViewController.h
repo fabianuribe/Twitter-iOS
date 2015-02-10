@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
+
+@class ComposeViewController;
+
+@protocol composeViewControllerDelegate <NSObject>
+
+- (void) composeViewController: (ComposeViewController *) composeViewControler tweeted: (Tweet *)tweet;
+
+@end
+
 
 @interface ComposeViewController : UIViewController
 
 @property (strong, nonatomic) NSString * initialText;
+@property (nonatomic, weak) id <composeViewControllerDelegate> delegate;
 
 @end

@@ -9,6 +9,7 @@
 #import "ComposeViewController.h"
 #import "TwitterClient.h"
 #import "UIImageView+AFNetworking.h"
+#import "Tweet.h"
 #import "User.h"
 
 
@@ -68,7 +69,13 @@
     
     [[TwitterClient sharedInstance] updateStatus:self.statusTextView.text WithCompetion:^(NSDictionary *response, NSError *error) {
         if (response) {
+            
+            Tweet *freshTweet = [[Tweet alloc] initWithDictionary:response];
+            
+            [self.delegate composeViewController:self tweeted:freshTweet];
+            
             [self dismissViewControllerAnimated:YES completion:nil];
+            
         } else {
             NSLog(@"%@", error);
         }

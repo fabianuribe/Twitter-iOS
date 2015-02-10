@@ -13,9 +13,8 @@
 #import "TwitterClient.h"
 #import "TweetCell.h"
 
-@interface MainViewController ()  <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController ()  <UITableViewDataSource, UITableViewDelegate, composeViewControllerDelegate>
 
-@property (nonatomic, strong) NSMutableArray *tweets;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -107,6 +106,7 @@ static BOOL blockNetwork = NO;
 - (void) onNew {
     
     ComposeViewController *composeVC = [[ComposeViewController alloc] init];
+    composeVC.delegate = self;
     
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:composeVC];
     
@@ -176,6 +176,12 @@ static BOOL blockNetwork = NO;
             NSLog(@"%@", error);
         }
     } ];
+}
+
+- (void) composeViewController:(ComposeViewController *)composeViewControler tweeted:(Tweet *)tweet {
+    
+    [self.tweets insertObject:tweet atIndex:0];
+    [self.tableView reloadData];
 }
 
 
