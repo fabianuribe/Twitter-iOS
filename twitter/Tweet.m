@@ -21,6 +21,13 @@
         self.retweet_count = dictionary[@"retweet_count"];
         self.favorited = dictionary[@"favorited"];
         
+        // Since the API doesnt provide "favorites" count we calculate it.
+        if ([self.favorited boolValue]) {
+            self.favorited_count = [[NSString alloc] initWithFormat:@"%d", 1];
+        } else {
+            self.favorited_count = [[NSString alloc] initWithFormat:@"%d", 0];
+        }
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"EEE MMM d HH:mm:ss Z y";
         self.createdAt = [dateFormatter dateFromString: dictionary[@"created_at"]];

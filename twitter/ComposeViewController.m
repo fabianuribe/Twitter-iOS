@@ -35,19 +35,13 @@
     
     [self.avatarImage setImageWithURL:[NSURL URLWithString: [User currentUser].profileImageUrl]];
     
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelBtn)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onTweet)];
+    
+    if (self.initialText) {
+        self.statusTextView.text = self.initialText;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -33,8 +33,7 @@
     self.messageLabel.text = tweet.text;
     
     self.retweetCountLabel.text = [[NSString alloc] initWithFormat:@"%@", tweet.retweet_count];
-    self.favoriteCountLabel.text = [[NSString alloc] initWithFormat:@"%d", [tweet.retweet_count intValue]/3 ];
-
+    self.favoriteCountLabel.text = [[NSString alloc] initWithFormat:@"%@", tweet.favorited_count];
     
     self.timeStampLabel.text = [[NSString alloc] initWithFormat:@"%@", tweet.createdAt.shortTimeAgoSinceNow];
     

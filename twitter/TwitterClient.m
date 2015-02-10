@@ -111,6 +111,34 @@ NSString * const kTwitterConsumerBaseUrl = @"https://api.twitter.com";
     
 }
 
+- (void) favoriteTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion  {
+    
+    NSDictionary *parameters = @{@"id": id_str};
+    
+    [self POST:@"1.1/favorites/create.json" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        completion(responseObject, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+    
+}
+
+- (void) retweetTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion  {
+    
+    NSString *retweetUrl = [[NSString alloc] initWithFormat:@"1.1/statuses/retweet/%@.json", id_str];
+    
+    [self POST: retweetUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        completion(responseObject, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+    
+}
+
 
 
 @end

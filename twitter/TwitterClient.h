@@ -21,6 +21,8 @@
 
 - (void) getTweets: (NSDictionary *) params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion;
 - (void) updateStatus:(NSString *) status WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion;
+- (void) favoriteTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion  ;
+- (void) retweetTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion  ;
 
 
 

@@ -65,6 +65,9 @@ static BOOL blockNetwork = NO;
         }
     } ];
     
+    [self.tableView reloadData];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -132,13 +135,8 @@ static BOOL blockNetwork = NO;
     
     if (actualPosition >= contentHeight && self.tweets.count && !blockNetwork ) {
         
-        NSLog(@"RQUEEEEEEEEEST!!!!!!");
         
         Tweet *lastTweet = [self.tweets lastObject];
-        
-        NSLog(@"%@", lastTweet.text);
-        NSLog(@"%@", lastTweet.id_str);
-
         
         NSDictionary *params = @{ @"max_id": lastTweet.id_str };
         

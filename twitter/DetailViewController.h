@@ -18,9 +18,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *retweetCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCountLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *retweetIcon;
-@property (weak, nonatomic) IBOutlet UIImageView *favoriteIcon;
-@property (weak, nonatomic) IBOutlet UIImageView *replyIcon;
+@property (weak, nonatomic) IBOutlet UIButton *replyBtn;
+@property (weak, nonatomic) IBOutlet UIButton *retweetBtn;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteBtn;
+
+- (IBAction)onReply:(id)sender;
+- (IBAction)onRetweet:(id)sender;
+- (IBAction)onFavorite:(id)sender;
 
 @property (nonatomic, strong) Tweet *tweet;
 
