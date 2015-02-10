@@ -126,6 +126,9 @@ static BOOL blockNetwork = NO;
     [self.navigationController pushViewController: tweetDetailVC animated:YES];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
 
 
 - (void)scrollViewDidScroll:(UIScrollView *) tableView
