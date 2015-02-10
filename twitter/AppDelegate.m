@@ -39,9 +39,21 @@
 
     } else {
         LoginViewController *vc = [[LoginViewController alloc] init];
+        
+        vc.title = @"Twitter a la Fab";
+        
         UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
+        
+//        [nvc.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//        
+//        nvc.navigationBar.shadowImage = [UIImage new];
+//        
+//        nvc.navigationBar.translucent = YES;
+//        
+//        nvc.view.backgroundColor = [UIColor clearColor];
 
         self.window.rootViewController = nvc;
+        
     }
 
     [self.window makeKeyAndVisible];

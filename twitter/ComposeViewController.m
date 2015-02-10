@@ -18,10 +18,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (weak, nonatomic) IBOutlet UILabel *charCountLabel;
 
 @end
 
+
+
 @implementation ComposeViewController
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,11 +49,19 @@
         self.statusTextView.text = self.initialText;
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewDidChange:) name:UITextViewTextDidChangeNotification object:self.statusTextView];
+
+        
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void) viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextViewTextDidChangeNotification object:nil];
 }
 
 /*
@@ -81,5 +95,23 @@
         }
     }];
 }
+
+- (void)textViewDidChange:(UITextView *)textView {
+    // Update the character count
+    int characterCount = 140 - [[self.statusTextView text] length];
+    [self.charCountLabel setText:[NSString stringWithFormat:@"%d", characterCount]];
+    
+    // Check if the count is over the limit
+    if(characterCount < 0) {
+        // Change the color
+        [self.charCountLabel setTextColor:[UIColor redColor]];
+    }
+    else if(characterCount < 20) {
+        // Change the color to yellow
+        [self.charCountLabel setTextColor:[UIColor orangeColor]];
+    }
+}
+
+
 
 @end

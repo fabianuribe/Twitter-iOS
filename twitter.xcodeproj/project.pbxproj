@@ -31,6 +31,7 @@
 		D6C4DC431A8494B400C94FA3 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC411A8494B400C94FA3 /* ComposeViewController.xib */; };
 		D6C4DC471A8494E100C94FA3 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC451A8494E100C94FA3 /* TweetCell.m */; };
 		D6C4DC481A8494E100C94FA3 /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC461A8494E100C94FA3 /* TweetCell.xib */; };
+		D6E69EB51A89EDBC00E4B279 /* Twitter_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E69EB41A89EDBC00E4B279 /* Twitter_logo_white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D6C4DC441A8494E000C94FA3 /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
 		D6C4DC451A8494E100C94FA3 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 		D6C4DC461A8494E100C94FA3 /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetCell.xib; sourceTree = "<group>"; };
+		D6E69EB41A89EDBC00E4B279 /* Twitter_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_white.png; sourceTree = "<group>"; };
 		DEBEA0DEF9C03CD45B79A33C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92FF3808BBFED26EFFD3918 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 		D618EB071A8865620048EC0D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D6E69EB41A89EDBC00E4B279 /* Twitter_logo_white.png */,
 				D6B40BC31A886B570012268B /* favorite_on.png */,
 				D6B40BC41A886B570012268B /* reply.png */,
 				D6B40BC51A886B570012268B /* retweet_on.png */,
@@ -307,6 +310,7 @@
 				D6B40BC81A886B570012268B /* retweet_on.png in Resources */,
 				D6C4DC431A8494B400C94FA3 /* ComposeViewController.xib in Resources */,
 				D6C4DC1B1A8488E200C94FA3 /* LaunchScreen.xib in Resources */,
+				D6E69EB51A89EDBC00E4B279 /* Twitter_logo_white.png in Resources */,
 				D6B40BC71A886B570012268B /* reply.png in Resources */,
 				D6C4DC481A8494E100C94FA3 /* TweetCell.xib in Resources */,
 				D6B40BC61A886B570012268B /* favorite_on.png in Resources */,
