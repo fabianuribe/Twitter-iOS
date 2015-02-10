@@ -7,8 +7,16 @@
 //
 
 #import "ComposeViewController.h"
+#import "TwitterClient.h"
+#import "UIImageView+AFNetworking.h"
+#import "User.h"
+
 
 @interface ComposeViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *statusTextView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
 
 @end
 
@@ -17,9 +25,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.avatarImage.layer.cornerRadius = 8.0;
+    self.avatarImage.clipsToBounds = YES;
+    
+    [self.statusTextView becomeFirstResponder];
+    
+    self.userNameLabel.text = [[NSString alloc] initWithFormat:@"@%@", [User currentUser].screenName];
+    self.nameLabel.text = [User currentUser].name;
+    
+    [self.avatarImage setImageWithURL:[NSURL URLWithString: [User currentUser].profileImageUrl]];
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelBtn)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onApplyBtn)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onTweet)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,8 +70,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) onApplyBtn {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void) onTweet {
+    
+    [[TwitterClient sharedInstance] updateStatus:self.statusTextView.text WithCompetion:^(NSDictionary *response, NSError *error) {
+        if (response) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 
 @end

@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController">
             <connections>
+                <outlet property="avatarImage" destination="9lr-bt-BnG" id="MUa-Uy-IYZ"/>
+                <outlet property="nameLabel" destination="Us4-14-9Zw" id="TXi-J2-1CG"/>
+                <outlet property="statusTextView" destination="OtP-gf-UCt" id="sAZ-Jb-eqC"/>
+                <outlet property="userNameLabel" destination="ric-lp-Epf" id="bvh-66-b8k"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,26 +19,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lr-bt-BnG">
-                    <rect key="frame" x="12" y="85" width="65" height="65"/>
+                    <rect key="frame" x="12" y="85" width="48" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="65" id="2of-Xd-h3K"/>
-                        <constraint firstAttribute="height" constant="65" id="Uq5-gh-tcO"/>
+                        <constraint firstAttribute="width" constant="48" id="2of-Xd-h3K"/>
+                        <constraint firstAttribute="height" constant="48" id="Uq5-gh-tcO"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fabian Uribe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us4-14-9Zw">
-                    <rect key="frame" x="85" y="85" width="84" height="17"/>
+                    <rect key="frame" x="68" y="85" width="84" height="17"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@fabianuribe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ric-lp-Epf">
-                    <rect key="frame" x="85" y="108" width="78" height="16"/>
+                    <rect key="frame" x="68" y="106" width="78" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.67874053030000003" green="0.67874053030000003" blue="0.67874053030000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtP-gf-UCt">
-                    <rect key="frame" x="12" y="162" width="296" height="128"/>
+                    <rect key="frame" x="12" y="145" width="296" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="T2l-8D-67R"/>
@@ -48,7 +52,7 @@
                 <constraint firstItem="9lr-bt-BnG" firstAttribute="top" secondItem="Us4-14-9Zw" secondAttribute="top" id="2rg-o2-tvM"/>
                 <constraint firstItem="ric-lp-Epf" firstAttribute="leading" secondItem="Us4-14-9Zw" secondAttribute="leading" id="4N4-Da-oKl"/>
                 <constraint firstItem="OtP-gf-UCt" firstAttribute="top" secondItem="9lr-bt-BnG" secondAttribute="bottom" constant="12" id="9HJ-Kn-ONz"/>
-                <constraint firstItem="ric-lp-Epf" firstAttribute="top" secondItem="Us4-14-9Zw" secondAttribute="bottom" constant="6" id="BAT-9r-rpp"/>
+                <constraint firstItem="ric-lp-Epf" firstAttribute="top" secondItem="Us4-14-9Zw" secondAttribute="bottom" constant="4" id="BAT-9r-rpp"/>
                 <constraint firstItem="OtP-gf-UCt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="HC2-UQ-Pe1"/>
                 <constraint firstAttribute="trailing" secondItem="OtP-gf-UCt" secondAttribute="trailing" constant="12" id="UnI-ca-TWk"/>
                 <constraint firstItem="9lr-bt-BnG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="Vda-Zq-kcI"/>

@@ -10,16 +10,21 @@
 #import "LoginViewController.h"
 #import "ComposeViewController.h"
 #import "DetailViewController.h"
+#import "TwitterClient.h"
 #import "TweetCell.h"
 
 @interface MainViewController ()  <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *tweets;
+@property (nonatomic, strong) NSMutableArray *tweets;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
 @implementation MainViewController
+
+
+static BOOL blockNetwork = NO;
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +50,21 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+
+    
+    [[TwitterClient sharedInstance] getTweets: nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
+        
+        if (tweetArray.count) {
+            self.tweets = [tweetArray mutableCopy];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error);
+        }
+    } ];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,14 +73,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.tweets.count - 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     
-//    cell.userNameLabel.text = @"Fabian";
+    cell.tweet = self.tweets[indexPath.row];
     
     return cell;
     
@@ -71,10 +91,11 @@
 
 - (void) onSignout {
     
+    
+    [User signOut];
+    
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     
-    
-//    [self.navigationController pushViewController: tweetDetailVC animated:YES];
     [self.navigationController presentViewController: loginVC animated:YES completion:nil];
 
     
@@ -95,11 +116,66 @@
     
      DetailViewController *tweetDetailVC = [[DetailViewController alloc] init];
     
-//    DetailViewController.tweet = self.tweets[indexPath.row];
+    tweetDetailVC.tweet = self.tweets[indexPath.row];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self.navigationController pushViewController: tweetDetailVC animated:YES];
 }
+
+
+
+- (void)scrollViewDidScroll:(UIScrollView *) tableView
+{
+    CGFloat actualPosition = tableView.contentOffset.y;
+    CGFloat contentHeight = tableView.contentSize.height - 900;
+    
+    if (actualPosition >= contentHeight && self.tweets.count && !blockNetwork ) {
+        
+        NSLog(@"RQUEEEEEEEEEST!!!!!!");
+        
+        Tweet *lastTweet = [self.tweets lastObject];
+        
+        NSLog(@"%@", lastTweet.text);
+        NSLog(@"%@", lastTweet.id_str);
+
+        
+        NSDictionary *params = @{ @"max_id": lastTweet.id_str };
+        
+        
+        blockNetwork = YES;
+        [[TwitterClient sharedInstance] getTweets:params WithCompletion:^(NSArray *tweetArray, NSError *error) {
+            if (tweetArray.count) {
+
+                [self.tweets addObjectsFromArray:tweetArray];
+                [self.tableView reloadData];
+                
+                blockNetwork = NO;
+
+            } else {
+                NSLog(@"%@", error);
+                blockNetwork = YES;
+
+            }
+        } ];
+    }
+}
+
+
+- (void)onRefresh {
+
+    [[TwitterClient sharedInstance] getTweets: nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
+        if (tweetArray.count) {
+            [self.tweets removeAllObjects];
+            self.tweets = [tweetArray mutableCopy];
+            
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        } else {
+            NSLog(@"%@", error);
+        }
+    } ];
+}
+
 
 @end

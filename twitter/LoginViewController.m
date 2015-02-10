@@ -7,8 +7,11 @@
 //
 
 #import "LoginViewController.h"
+#import "MainViewController.h"
+#import "TwitterClient.h"
 
 @interface LoginViewController ()
+- (IBAction)loginAction:(id)sender;
 
 @end
 
@@ -35,4 +38,24 @@
 }
 */
 
+- (IBAction)loginAction:(id)sender {
+    
+[[TwitterClient sharedInstance] logInWithCompletion:^(User *user, NSError *error) {
+    if (user) {
+        MainViewController *mainViewVC = [[MainViewController alloc] init];
+        
+        NSLog(@"%@", user.name);
+        
+        [self.navigationController pushViewController:mainViewVC animated:YES];
+        self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+        self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:118/255.0 green:181/255.0 blue:235/255.0 alpha:1.0];
+        self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    }
+    else {
+        NSLog(@"Hubo un error %@", error);
+    }
+}];
+    
+}
 @end

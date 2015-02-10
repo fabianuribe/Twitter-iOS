@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import "TwitterClient.h"
+#import "User.h"
+#import "Tweet.h"
 
 @interface AppDelegate ()
 
@@ -21,11 +24,11 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    
-    if (YES) {
-        MainViewController *vc = [[MainViewController alloc] init];
 
+    
+    if ([User currentUser]) {
+        
+        MainViewController *vc = [[MainViewController alloc] init];
         UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
         nvc.navigationBar.barStyle = UIStatusBarStyleLightContent;
         nvc.navigationBar.barStyle = UIBarStyleBlackTranslucent;
@@ -36,7 +39,9 @@
 
     } else {
         LoginViewController *vc = [[LoginViewController alloc] init];
-        self.window.rootViewController = vc;
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
+
+        self.window.rootViewController = nvc;
     }
 
     [self.window makeKeyAndVisible];
@@ -65,6 +70,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [[TwitterClient sharedInstance] openUrl:url];
+    return YES;
 }
 
 @end
