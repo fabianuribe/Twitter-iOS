@@ -6,21 +6,22 @@
 //  Copyright (c) 2015 fabian. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "TimelineViewController.h"
 #import "LoginViewController.h"
 #import "ComposeViewController.h"
 #import "DetailViewController.h"
+#import "ProfileViewController.h"
 #import "TwitterClient.h"
 #import "TweetCell.h"
 
-@interface MainViewController ()  <UITableViewDataSource, UITableViewDelegate, composeViewControllerDelegate>
+@interface TimelineViewController ()  <UITableViewDataSource, UITableViewDelegate, composeViewControllerDelegate, UITableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
-@implementation MainViewController
+@implementation TimelineViewController
 
 
 static BOOL blockNetwork = NO;
@@ -86,6 +87,8 @@ static BOOL blockNetwork = NO;
     
     cell.tweet = self.tweets[indexPath.row];
     
+    cell.delegate = self;
+    
     return cell;
     
 }
@@ -93,43 +96,33 @@ static BOOL blockNetwork = NO;
 
 #pragma mark - Navigation
 
-- (void) onSignout {
-    
-    
-    [User signOut];
-    
-    LoginViewController *loginVC = [[LoginViewController alloc] init];
-    
-    [self.navigationController presentViewController: loginVC animated:YES completion:nil];
-
-    
-}
-
-- (void) onNew {
-    
-    ComposeViewController *composeVC = [[ComposeViewController alloc] init];
-    composeVC.delegate = self;
-    
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:composeVC];
-    
-    [self presentViewController:nvc animated:YES completion:nil];
 
 
-}
 
 - (void)tableView: (UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-     DetailViewController *tweetDetailVC = [[DetailViewController alloc] init];
-    
+    DetailViewController *tweetDetailVC = [[DetailViewController alloc] init];
     tweetDetailVC.tweet = self.tweets[indexPath.row];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.navigationController pushViewController: tweetDetailVC animated:YES];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tweetDetailVC];
+    
+    [self.superView presentViewController:nvc animated:YES completion:nil];
+    
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [self.tableView reloadData];
+
+- (void) UITableViewCellShowUser:(User *)user  {
+    
+    ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+    profileVC.user = user;
+    profileVC.addNavigation = YES;
+    
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:profileVC];
+    
+    [self.superView presentViewController:nvc animated:YES completion:nil];
+    
 }
 
 
@@ -185,6 +178,13 @@ static BOOL blockNetwork = NO;
     [self.tweets insertObject:tweet atIndex:0];
     [self.tableView reloadData];
 }
+
+
+
+- (void) viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
 
 
 @end

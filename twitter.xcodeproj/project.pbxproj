@@ -12,6 +12,8 @@
 		D662E5AB1A926FD5001D39E9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D662E5A91A926FD5001D39E9 /* ProfileViewController.xib */; };
 		D662E5AF1A928B52001D39E9 /* ProfileHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D662E5AD1A928B52001D39E9 /* ProfileHeaderViewController.m */; };
 		D662E5B01A928B52001D39E9 /* ProfileHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D662E5AE1A928B52001D39E9 /* ProfileHeaderViewController.xib */; };
+		D6ACBF171A93221D005EF961 /* PageBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ACBF151A93221D005EF961 /* PageBarViewController.m */; };
+		D6ACBF181A93221D005EF961 /* PageBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6ACBF161A93221D005EF961 /* PageBarViewController.xib */; };
 		D6B1D57A1A92F7C50004D653 /* SegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B1D5781A92F7C50004D653 /* SegmentedControlViewController.m */; };
 		D6B1D57B1A92F7C50004D653 /* SegmentedControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B1D5791A92F7C50004D653 /* SegmentedControlViewController.xib */; };
 		D6B40BC01A8868140012268B /* retweet.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B40BBF1A8868140012268B /* retweet.png */; };
@@ -27,8 +29,8 @@
 		D6C4DC181A8488E200C94FA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC171A8488E200C94FA3 /* Images.xcassets */; };
 		D6C4DC1B1A8488E200C94FA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC191A8488E200C94FA3 /* LaunchScreen.xib */; };
 		D6C4DC271A8488E200C94FA3 /* twitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC261A8488E200C94FA3 /* twitterTests.m */; };
-		D6C4DC331A84896E00C94FA3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC311A84896E00C94FA3 /* MainViewController.m */; };
-		D6C4DC341A84896E00C94FA3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC321A84896E00C94FA3 /* MainViewController.xib */; };
+		D6C4DC331A84896E00C94FA3 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC311A84896E00C94FA3 /* TimelineViewController.m */; };
+		D6C4DC341A84896E00C94FA3 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC321A84896E00C94FA3 /* TimelineViewController.xib */; };
 		D6C4DC381A848D0600C94FA3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC361A848D0600C94FA3 /* LoginViewController.m */; };
 		D6C4DC391A848D0600C94FA3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C4DC371A848D0600C94FA3 /* LoginViewController.xib */; };
 		D6C4DC3D1A84949300C94FA3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4DC3B1A84949300C94FA3 /* DetailViewController.m */; };
@@ -58,6 +60,9 @@
 		D662E5AD1A928B52001D39E9 /* ProfileHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHeaderViewController.m; sourceTree = "<group>"; };
 		D662E5AE1A928B52001D39E9 /* ProfileHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderViewController.xib; sourceTree = "<group>"; };
 		D69A3319FF0A90E5A988956E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D6ACBF141A93221D005EF961 /* PageBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBarViewController.h; sourceTree = "<group>"; };
+		D6ACBF151A93221D005EF961 /* PageBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBarViewController.m; sourceTree = "<group>"; };
+		D6ACBF161A93221D005EF961 /* PageBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageBarViewController.xib; sourceTree = "<group>"; };
 		D6B1D5771A92F7C50004D653 /* SegmentedControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControlViewController.h; sourceTree = "<group>"; };
 		D6B1D5781A92F7C50004D653 /* SegmentedControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControlViewController.m; sourceTree = "<group>"; };
 		D6B1D5791A92F7C50004D653 /* SegmentedControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlViewController.xib; sourceTree = "<group>"; };
@@ -82,9 +87,9 @@
 		D6C4DC201A8488E200C94FA3 /* twitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C4DC251A8488E200C94FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6C4DC261A8488E200C94FA3 /* twitterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twitterTests.m; sourceTree = "<group>"; };
-		D6C4DC301A84896E00C94FA3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		D6C4DC311A84896E00C94FA3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D6C4DC321A84896E00C94FA3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D6C4DC301A84896E00C94FA3 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		D6C4DC311A84896E00C94FA3 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		D6C4DC321A84896E00C94FA3 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 		D6C4DC351A848D0600C94FA3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D6C4DC361A848D0600C94FA3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D6C4DC371A848D0600C94FA3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -201,9 +206,9 @@
 				D6C4DC171A8488E200C94FA3 /* Images.xcassets */,
 				D6C4DC191A8488E200C94FA3 /* LaunchScreen.xib */,
 				D6C4DC0A1A8488E200C94FA3 /* Supporting Files */,
-				D6C4DC301A84896E00C94FA3 /* MainViewController.h */,
-				D6C4DC311A84896E00C94FA3 /* MainViewController.m */,
-				D6C4DC321A84896E00C94FA3 /* MainViewController.xib */,
+				D6C4DC301A84896E00C94FA3 /* TimelineViewController.h */,
+				D6C4DC311A84896E00C94FA3 /* TimelineViewController.m */,
+				D6C4DC321A84896E00C94FA3 /* TimelineViewController.xib */,
 				D6C4DC351A848D0600C94FA3 /* LoginViewController.h */,
 				D6C4DC361A848D0600C94FA3 /* LoginViewController.m */,
 				D6C4DC371A848D0600C94FA3 /* LoginViewController.xib */,
@@ -218,6 +223,9 @@
 				D6C4DC461A8494E100C94FA3 /* TweetCell.xib */,
 				D6C4D1781A86DB3A003A1C7A /* TwitterClient.h */,
 				D6C4D1791A86DB3A003A1C7A /* TwitterClient.m */,
+				D6ACBF141A93221D005EF961 /* PageBarViewController.h */,
+				D6ACBF151A93221D005EF961 /* PageBarViewController.m */,
+				D6ACBF161A93221D005EF961 /* PageBarViewController.xib */,
 			);
 			path = twitter;
 			sourceTree = "<group>";
@@ -343,12 +351,13 @@
 				D6B40BC81A886B570012268B /* retweet_on.png in Resources */,
 				D6C4DC431A8494B400C94FA3 /* ComposeViewController.xib in Resources */,
 				D6C4DC1B1A8488E200C94FA3 /* LaunchScreen.xib in Resources */,
+				D6ACBF181A93221D005EF961 /* PageBarViewController.xib in Resources */,
 				D6E69EB51A89EDBC00E4B279 /* Twitter_logo_white.png in Resources */,
 				D6B40BC71A886B570012268B /* reply.png in Resources */,
 				D6C4DC481A8494E100C94FA3 /* TweetCell.xib in Resources */,
 				D6B40BC61A886B570012268B /* favorite_on.png in Resources */,
 				D6C4DC3E1A84949300C94FA3 /* DetailViewController.xib in Resources */,
-				D6C4DC341A84896E00C94FA3 /* MainViewController.xib in Resources */,
+				D6C4DC341A84896E00C94FA3 /* TimelineViewController.xib in Resources */,
 				D6B1D57B1A92F7C50004D653 /* SegmentedControlViewController.xib in Resources */,
 				D662E5B01A928B52001D39E9 /* ProfileHeaderViewController.xib in Resources */,
 				D6B40BC01A8868140012268B /* retweet.png in Resources */,
@@ -405,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C4DC3D1A84949300C94FA3 /* DetailViewController.m in Sources */,
+				D6ACBF171A93221D005EF961 /* PageBarViewController.m in Sources */,
 				D662E5AF1A928B52001D39E9 /* ProfileHeaderViewController.m in Sources */,
 				D6C4DC381A848D0600C94FA3 /* LoginViewController.m in Sources */,
 				D6C4D17E1A872182003A1C7A /* User.m in Sources */,
@@ -412,7 +422,7 @@
 				D6C4DC421A8494B400C94FA3 /* ComposeViewController.m in Sources */,
 				D6B1D57A1A92F7C50004D653 /* SegmentedControlViewController.m in Sources */,
 				D6C4D17A1A86DB3A003A1C7A /* TwitterClient.m in Sources */,
-				D6C4DC331A84896E00C94FA3 /* MainViewController.m in Sources */,
+				D6C4DC331A84896E00C94FA3 /* TimelineViewController.m in Sources */,
 				D6C4D1811A87268A003A1C7A /* Tweet.m in Sources */,
 				D6C4DC0D1A8488E200C94FA3 /* main.m in Sources */,
 				D6C4DC471A8494E100C94FA3 /* TweetCell.m in Sources */,

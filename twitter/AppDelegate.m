@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "PageBarViewController.h"
+#import "TimelineViewController.h"
 #import "LoginViewController.h"
 #import "TwitterClient.h"
 #import "User.h"
@@ -27,32 +28,19 @@
 
     
     if ([User currentUser]) {
-        
-        MainViewController *vc = [[MainViewController alloc] init];
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
-        nvc.navigationBar.barStyle = UIStatusBarStyleLightContent;
-        nvc.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-        nvc.navigationBar.barTintColor = [UIColor colorWithRed:118/255.0 green:181/255.0 blue:235/255.0 alpha:1.0];
-        nvc.navigationBar.tintColor = [UIColor whiteColor];
-        
-        self.window.rootViewController = nvc;
+    
+        PageBarViewController *vc = [[PageBarViewController alloc] init];
 
+        vc.superWindow = self.window;
+        
+        self.window.rootViewController = vc;
+        
     } else {
         LoginViewController *vc = [[LoginViewController alloc] init];
         
-        vc.title = @"Twitter a  la Fab";
+        vc.superWindow = self.window;
         
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
-        
-//        [nvc.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-//        
-//        nvc.navigationBar.shadowImage = [UIImage new];
-//        
-//        nvc.navigationBar.translucent = YES;
-//        
-//        nvc.view.backgroundColor = [UIColor clearColor];
-
-        self.window.rootViewController = nvc;
+        self.window.rootViewController = vc;
         
     }
 

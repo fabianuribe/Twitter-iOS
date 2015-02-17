@@ -9,28 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/LoginViewController.m"
-            timestampString = "445079103.81356"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-loginAction:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "twitter/DetailViewController.m"
-            timestampString = "445234413.919611"
+            timestampString = "445858920.812676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/DetailViewController.m"
-            timestampString = "445234413.919611"
+            timestampString = "445858920.812676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -57,12 +41,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445235602.24599"
+            filePath = "twitter/TimelineViewController.m"
+            timestampString = "445861233.081695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -135,12 +119,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445235602.24599"
+            filePath = "twitter/TimelineViewController.m"
+            timestampString = "445861233.081695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -151,12 +135,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445808628.253964"
+            filePath = "twitter/TimelineViewController.m"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -167,12 +151,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445808628.253964"
+            filePath = "twitter/TimelineViewController.m"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -246,11 +230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/DetailViewController.m"
-            timestampString = "445234413.919611"
+            timestampString = "445858920.812676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-onRetweet:"
             landmarkType = "5">
          </BreakpointContent>
@@ -262,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/DetailViewController.m"
-            timestampString = "445234413.919611"
+            timestampString = "445858920.812676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -293,12 +277,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445235602.24599"
+            filePath = "twitter/TimelineViewController.m"
+            timestampString = "445861233.081695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -309,45 +293,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445808628.253964"
+            filePath = "twitter/TimelineViewController.m"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "-viewDidAppear:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "twitter/MainViewController.m"
-            timestampString = "445808628.253964"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "-composeViewController:tweeted:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "twitter/TweetCell.m"
-            timestampString = "445809687.270448"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "-avatarTap:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -390,7 +342,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841845.301902"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
@@ -406,7 +358,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841845.301902"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
@@ -422,7 +374,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841930.223737"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
@@ -438,7 +390,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841930.223737"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
@@ -454,28 +406,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841845.301902"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "140"
             endingLineNumber = "140"
             landmarkName = "-getTimeline"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841930.223737"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "-getMentions"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -517,7 +453,7 @@
                   symbolName = "-[TwitterClient getFavorites:WithCompletion:]"
                   moduleName = "twitter"
                   urlString = "file:///Users/uribe/Documents/objective-c/twitter/twitter/TwitterClient.m"
-                  timestampString = "445841173.224591"
+                  timestampString = "445860267.006882"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -531,7 +467,7 @@
                   symbolName = "__45-[TwitterClient getFavorites:WithCompletion:]_block_invoke"
                   moduleName = "twitter"
                   urlString = "file:///Users/uribe/Documents/objective-c/twitter/twitter/TwitterClient.m"
-                  timestampString = "445841173.224777"
+                  timestampString = "445860267.007046"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -563,7 +499,7 @@
                   symbolName = "-[TwitterClient searchTweets:WithCompletion:]"
                   moduleName = "twitter"
                   urlString = "file:///Users/uribe/Documents/objective-c/twitter/twitter/TwitterClient.m"
-                  timestampString = "445841173.226214"
+                  timestampString = "445860267.007784"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
@@ -577,12 +513,12 @@
                   symbolName = "__45-[TwitterClient searchTweets:WithCompletion:]_block_invoke"
                   moduleName = "twitter"
                   urlString = "file:///Users/uribe/Documents/objective-c/twitter/twitter/TwitterClient.m"
-                  timestampString = "445841173.226445"
+                  timestampString = "445860267.007918"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "116"
                   endingLineNumber = "116"
-                  offsetFromSymbolStart = "61">
+                  offsetFromSymbolStart = "68">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -610,7 +546,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841930.223737"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
@@ -626,7 +562,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitter/ProfileViewController.m"
-            timestampString = "445841930.223737"
+            timestampString = "445861554.877813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
@@ -641,11 +577,11 @@
                   symbolName = "-[ProfileViewController getFavorites]"
                   moduleName = "twitter"
                   urlString = "file:///Users/uribe/Documents/objective-c/twitter/twitter/ProfileViewController.m"
-                  timestampString = "445841173.230121"
+                  timestampString = "445860267.009458"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
                   offsetFromSymbolStart = "200">
                </Location>
                <Location
@@ -655,14 +591,30 @@
                   symbolName = "__37-[ProfileViewController getFavorites]_block_invoke"
                   moduleName = "twitter"
                   urlString = "file:///Users/uribe/Documents/objective-c/twitter/twitter/ProfileViewController.m"
-                  timestampString = "445841173.230259"
+                  timestampString = "445860267.009583"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
                   offsetFromSymbolStart = "67">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitter/ProfileViewController.m"
+            timestampString = "445861554.877813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-getMentions"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

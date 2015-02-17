@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Tweet.h"
 
+@class UITableViewCell;
+
+@protocol UITableViewCellDelegate <NSObject>
+
+- (void) UITableViewCellShowUser: (User *)user;
+
+@end
+
+
 @interface TweetCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -21,4 +30,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCountLabel;
 @property (nonatomic, strong) Tweet *tweet;
 @property (nonatomic, retain) UINavigationController *superNavController;
+@property (nonatomic, weak) id<UITableViewCellDelegate> delegate;
+
 @end

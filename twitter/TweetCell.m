@@ -59,9 +59,9 @@
 
 - (IBAction)avatarTap:(id)sender {
     
-    ProfileViewController *profileVC = [[ProfileViewController alloc] init];
-    profileVC.user = _tweet.user;
-    
-    [self.superNavController pushViewController: profileVC animated:YES];
+    [self.delegate UITableViewCellShowUser:_tweet.user];
 }
+
+
+
 @end

@@ -34,8 +34,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Profile";
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(onNew)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(onBackBtn)];
     
     // Register cell view
     [self.tableView registerNib:[UINib nibWithNibName:@"TweetCell" bundle:nil] forCellReuseIdentifier:@"TweetCell"];
@@ -46,16 +45,16 @@
     [self.profileHeader setUser:self.user];
     CGFloat headerWidth = self.profileHeader.view.frame.size.width;
     CGFloat headerHeight = 270;
-    
-    
-    // Set the section Hedaer Controller
-    self.segmentedControl = [[SegmentedControlViewController alloc] init];
-    self.segmentedControl.delegate = self;
-    
-    
+
     self.profileHeader.view.frame = CGRectMake(0, 0, headerWidth, headerHeight);
     
     self.tableView.tableHeaderView = self.profileHeader.view;
+    
+    
+    // Set the section Header Controller
+    self.segmentedControl = [[SegmentedControlViewController alloc] init];
+    self.segmentedControl.delegate = self;
+    
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
@@ -101,12 +100,13 @@
 - (void)tableView: (UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     DetailViewController *tweetDetailVC = [[DetailViewController alloc] init];
-    
     tweetDetailVC.tweet = self.tweets[indexPath.row];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.navigationController pushViewController: tweetDetailVC animated:YES];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tweetDetailVC];
+    
+    [self.superView presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -168,29 +168,41 @@
 
 - (void) getMentions {
     
-    NSDictionary * params = @{@"q": [NSString stringWithFormat:@"@%@", self.user.screenName]};
-    
-    [[TwitterClient sharedInstance] searchTweets: params  WithCompletion:^(NSArray *tweetArray, NSError *error) {
-        if (tweetArray.count) {
-            [self.tweets removeAllObjects];
-            self.tweets = [tweetArray mutableCopy];
-            [self.tableView reloadData];
+    if (self.user.screenName == [User currentUser].screenName) {
+        
+        [[TwitterClient sharedInstance] getTimeline:@"mentions" WithParams: nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
             
-        } else {
-            NSLog(@"%@", error);
-        }
-    } ];
+            if (tweetArray.count) {
+                [self.tweets removeAllObjects];
+                self.tweets = [tweetArray mutableCopy];
+                [self.tableView reloadData];
+                
+            } else {
+                NSLog(@"%@", error);
+            }
+        } ];
+        
+    } else {
+    
+        NSDictionary * params = @{@"q": [NSString stringWithFormat:@"@%@", self.user.screenName]};
+        
+        [[TwitterClient sharedInstance] searchTweets: params  WithCompletion:^(NSArray *tweetArray, NSError *error) {
+            if (tweetArray.count) {
+                [self.tweets removeAllObjects];
+                self.tweets = [tweetArray mutableCopy];
+                [self.tableView reloadData];
+                
+            } else {
+                NSLog(@"%@", error);
+            }
+        } ];
+    }
 }
 
 #pragma mark - Navigation
 
-- (void) onNew {
-    
-    ComposeViewController *composeVC = [[ComposeViewController alloc] init];
-    
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:composeVC];
-    
-    [self presentViewController:nvc animated:YES completion:nil];
+- (void) onBackBtn {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

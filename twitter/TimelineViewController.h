@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PageBarViewController.h"
 
-@interface MainViewController : UIViewController
+@interface TimelineViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *tweets;
-
+@property (nonatomic, retain) PageBarViewController *superView;
 
 @end
