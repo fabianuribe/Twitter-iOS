@@ -20,5 +20,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *retweetCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCountLabel;
 @property (nonatomic, strong) Tweet *tweet;
-
+@property (nonatomic, retain) UINavigationController *superNavController;
 @end

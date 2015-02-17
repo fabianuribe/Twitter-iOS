@@ -77,7 +77,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq0-Ex-D8y">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fq0-Ex-D8y">
                     <rect key="frame" x="12" y="280" width="296" height="1"/>
                     <color key="backgroundColor" red="0.90056818181515152" green="0.90056818181515152" blue="0.90056818181515152" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -93,7 +93,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be9-Pp-Egy">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="be9-Pp-Egy">
                     <rect key="frame" x="12" y="325" width="296" height="1"/>
                     <color key="backgroundColor" red="0.90056818181515152" green="0.90056818181515152" blue="0.90056818181515152" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -106,7 +106,7 @@
                     <color key="textColor" red="0.67874053030000003" green="0.67874053030000003" blue="0.67874053030000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj2-vP-7z2">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj2-vP-7z2">
                     <rect key="frame" x="123" y="292" width="74" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="74" id="gyd-D6-V9e"/>
@@ -118,7 +118,7 @@
                         <action selector="onRetweet:" destination="-1" eventType="touchUpInside" id="fS0-78-Ehm"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4N-0Q-x6U">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4N-0Q-x6U">
                     <rect key="frame" x="19" y="292" width="74" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="74" id="pmR-p2-xrS"/>
@@ -130,7 +130,7 @@
                         <action selector="onReply:" destination="-1" eventType="touchUpInside" id="rnE-pg-FVl"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2T-Xa-j56">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2T-Xa-j56">
                     <rect key="frame" x="227" y="292" width="74" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="74" id="fcp-Te-fgD"/>

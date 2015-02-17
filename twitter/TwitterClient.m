@@ -81,13 +81,41 @@ NSString * const kTwitterConsumerBaseUrl = @"https://api.twitter.com";
 }
 
 
-- (void) getTweets: (NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion {
-
-    NSLog(@"%@", params[@"since_id"]);
+- (void) getTimeline: (NSString *)timelineType WithParams:(NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion {
     
-    [self GET:@"1.1/statuses/home_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString * apiUrl = [NSString stringWithFormat: @"1.1/statuses/%@_timeline.json", timelineType];
+    
+    [self GET:apiUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
        
         NSArray *tweetArray = [Tweet tweetsWithArrray:responseObject];
+        
+        completion(tweetArray, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+
+- (void) getFavorites: (NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion {
+    
+    [self GET:@"1.1/favorites/list.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *tweetArray = [Tweet tweetsWithArrray:responseObject];
+        
+        completion(tweetArray, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+
+- (void) searchTweets: (NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion {
+    
+    [self GET:@"1.1/search/tweets.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *tweetArray = [Tweet tweetsWithArrray:responseObject[@"statuses"]];
         
         completion(tweetArray, nil);
         

@@ -22,13 +22,29 @@
     self = [super init];
     
     if(self) {
-        self.dictionary = dictionary;
-        self.name = dictionary[@"name"];
-        self.screenName = dictionary[@"screen_name"];
-        self.profileImageUrl = dictionary[@"profile_image_url"];
-        self.tagLine = dictionary[@"name"];
+    @try {
+            self.dictionary = dictionary;
+            self.id_str = dictionary[@"id_srt"];
+            self.name = dictionary[@"name"];
+            self.screenName = dictionary[@"screen_name"];
+            self.profileImageUrl = dictionary[@"profile_image_url"];
+            self.backgroundImageUrl = dictionary[@"profile_background_image_url_https"];
+            self.tagLine = dictionary[@"description"];
+            self.location = dictionary[@"location"];
+            self.following = dictionary[@"following"];
+            self.followersCount = dictionary[@"followers_count"];
+            self.followingCount = dictionary[@"friends_count"];
+            self.tweetCount = dictionary[@"statuses_count"];
+        
+            NSDictionary *userUrl = [dictionary valueForKeyPath:@"entities.url.urls"][0];
+            self.website = userUrl[@"display_url"];
+        }
+        @catch (NSException *theException) {
+            NSLog(@"An exception occurred: %@", theException.name);
+            NSLog(@"Here are some details: %@", theException.reason);
+        }
+        
     }
-    
     return self;
 }
 

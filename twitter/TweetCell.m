@@ -9,8 +9,12 @@
 #import "TweetCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "DateTools.h"
+#import "ProfileViewController.h"
 
+@interface TweetCell ()
+- (IBAction)avatarTap:(id)sender;
 
+@end
 
 @implementation TweetCell
 
@@ -27,6 +31,7 @@
 }
 
 - (void) setTweet:(Tweet *)tweet {
+     _tweet = tweet;
     
     self.userNameLabel.text = [[NSString alloc] initWithFormat:@"@%@", tweet.user.screenName];
     self.nameLabel.text = tweet.user.name;
@@ -50,7 +55,13 @@
     } else {
         [self.favoriteIcon setImage:[UIImage imageNamed:@"favorite.png"]];
     }
-    
 }
 
+- (IBAction)avatarTap:(id)sender {
+    
+    ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+    profileVC.user = _tweet.user;
+    
+    [self.superNavController pushViewController: profileVC animated:YES];
+}
 @end

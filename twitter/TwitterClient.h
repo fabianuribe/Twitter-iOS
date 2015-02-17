@@ -19,10 +19,16 @@
 - (void) logInWithCompletion: (void (^)(User *user, NSError *error))completion;
 - (void) openUrl: (NSURL *)url;
 
-- (void) getTweets: (NSDictionary *) params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion;
+- (void) getTimeline: (NSString *)timelineType WithParams:(NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion ;
+
+- (void) getFavorites: (NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion;
+- (void) searchTweets: (NSDictionary *)params WithCompletion: (void (^)(NSArray *tweetArray, NSError *error))completion;
+
+
+
 - (void) updateStatus:(NSString *) status WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion;
-- (void) favoriteTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion  ;
-- (void) retweetTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion  ;
+- (void) favoriteTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion;
+- (void) retweetTweet:(NSString *) id_str WithCompetion: (void (^)(NSDictionary *response, NSError *error))completion;
 
 
 

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		832E9259C0557630BBD81312 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBEA0DEF9C03CD45B79A33C /* libPods.a */; };
+		D662E5AA1A926FD5001D39E9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D662E5A81A926FD5001D39E9 /* ProfileViewController.m */; };
+		D662E5AB1A926FD5001D39E9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D662E5A91A926FD5001D39E9 /* ProfileViewController.xib */; };
+		D662E5AF1A928B52001D39E9 /* ProfileHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D662E5AD1A928B52001D39E9 /* ProfileHeaderViewController.m */; };
+		D662E5B01A928B52001D39E9 /* ProfileHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D662E5AE1A928B52001D39E9 /* ProfileHeaderViewController.xib */; };
+		D6B1D57A1A92F7C50004D653 /* SegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B1D5781A92F7C50004D653 /* SegmentedControlViewController.m */; };
+		D6B1D57B1A92F7C50004D653 /* SegmentedControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B1D5791A92F7C50004D653 /* SegmentedControlViewController.xib */; };
 		D6B40BC01A8868140012268B /* retweet.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B40BBF1A8868140012268B /* retweet.png */; };
 		D6B40BC21A8868C20012268B /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B40BC11A8868C20012268B /* favorite.png */; };
 		D6B40BC61A886B570012268B /* favorite_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B40BC31A886B570012268B /* favorite_on.png */; };
@@ -45,7 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D662E5A71A926FD5001D39E9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		D662E5A81A926FD5001D39E9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		D662E5A91A926FD5001D39E9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		D662E5AC1A928B52001D39E9 /* ProfileHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHeaderViewController.h; sourceTree = "<group>"; };
+		D662E5AD1A928B52001D39E9 /* ProfileHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHeaderViewController.m; sourceTree = "<group>"; };
+		D662E5AE1A928B52001D39E9 /* ProfileHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderViewController.xib; sourceTree = "<group>"; };
 		D69A3319FF0A90E5A988956E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D6B1D5771A92F7C50004D653 /* SegmentedControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControlViewController.h; sourceTree = "<group>"; };
+		D6B1D5781A92F7C50004D653 /* SegmentedControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControlViewController.m; sourceTree = "<group>"; };
+		D6B1D5791A92F7C50004D653 /* SegmentedControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlViewController.xib; sourceTree = "<group>"; };
 		D6B40BBF1A8868140012268B /* retweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retweet.png; path = Images.xcassets/retweet.png; sourceTree = "<group>"; };
 		D6B40BC11A8868C20012268B /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favorite.png; path = Images.xcassets/favorite.png; sourceTree = "<group>"; };
 		D6B40BC31A886B570012268B /* favorite_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favorite_on.png; path = Images.xcassets/favorite_on.png; sourceTree = "<group>"; };
@@ -128,6 +143,22 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		D6B1D5761A92E5860004D653 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D662E5A71A926FD5001D39E9 /* ProfileViewController.h */,
+				D662E5A81A926FD5001D39E9 /* ProfileViewController.m */,
+				D662E5A91A926FD5001D39E9 /* ProfileViewController.xib */,
+				D662E5AC1A928B52001D39E9 /* ProfileHeaderViewController.h */,
+				D662E5AD1A928B52001D39E9 /* ProfileHeaderViewController.m */,
+				D662E5AE1A928B52001D39E9 /* ProfileHeaderViewController.xib */,
+				D6B1D5771A92F7C50004D653 /* SegmentedControlViewController.h */,
+				D6B1D5781A92F7C50004D653 /* SegmentedControlViewController.m */,
+				D6B1D5791A92F7C50004D653 /* SegmentedControlViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		D6C4D17B1A872107003A1C7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +193,7 @@
 		D6C4DC091A8488E200C94FA3 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				D6B1D5761A92E5860004D653 /* Profile */,
 				D618EB071A8865620048EC0D /* Images */,
 				D6C4D17B1A872107003A1C7A /* Models */,
 				D6C4DC0E1A8488E200C94FA3 /* AppDelegate.h */,
@@ -306,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D662E5AB1A926FD5001D39E9 /* ProfileViewController.xib in Resources */,
 				D6C4DC391A848D0600C94FA3 /* LoginViewController.xib in Resources */,
 				D6B40BC81A886B570012268B /* retweet_on.png in Resources */,
 				D6C4DC431A8494B400C94FA3 /* ComposeViewController.xib in Resources */,
@@ -316,6 +349,8 @@
 				D6B40BC61A886B570012268B /* favorite_on.png in Resources */,
 				D6C4DC3E1A84949300C94FA3 /* DetailViewController.xib in Resources */,
 				D6C4DC341A84896E00C94FA3 /* MainViewController.xib in Resources */,
+				D6B1D57B1A92F7C50004D653 /* SegmentedControlViewController.xib in Resources */,
+				D662E5B01A928B52001D39E9 /* ProfileHeaderViewController.xib in Resources */,
 				D6B40BC01A8868140012268B /* retweet.png in Resources */,
 				D6B40BC21A8868C20012268B /* favorite.png in Resources */,
 				D6C4DC181A8488E200C94FA3 /* Images.xcassets in Resources */,
@@ -370,15 +405,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C4DC3D1A84949300C94FA3 /* DetailViewController.m in Sources */,
+				D662E5AF1A928B52001D39E9 /* ProfileHeaderViewController.m in Sources */,
 				D6C4DC381A848D0600C94FA3 /* LoginViewController.m in Sources */,
 				D6C4D17E1A872182003A1C7A /* User.m in Sources */,
 				D6C4DC101A8488E200C94FA3 /* AppDelegate.m in Sources */,
 				D6C4DC421A8494B400C94FA3 /* ComposeViewController.m in Sources */,
+				D6B1D57A1A92F7C50004D653 /* SegmentedControlViewController.m in Sources */,
 				D6C4D17A1A86DB3A003A1C7A /* TwitterClient.m in Sources */,
 				D6C4DC331A84896E00C94FA3 /* MainViewController.m in Sources */,
 				D6C4D1811A87268A003A1C7A /* Tweet.m in Sources */,
 				D6C4DC0D1A8488E200C94FA3 /* main.m in Sources */,
 				D6C4DC471A8494E100C94FA3 /* TweetCell.m in Sources */,
+				D662E5AA1A926FD5001D39E9 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

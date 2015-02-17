@@ -54,7 +54,7 @@ static BOOL blockNetwork = NO;
     [self.tableView insertSubview:self.refreshControl atIndex:0];
 
     
-    [[TwitterClient sharedInstance] getTweets: nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
+    [[TwitterClient sharedInstance] getTimeline:@"home" WithParams:nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
         
         if (tweetArray.count) {
             self.tweets = [tweetArray mutableCopy];
@@ -75,12 +75,14 @@ static BOOL blockNetwork = NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.tweets.count - 1;
+    return self.tweets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
+    
+    cell.superNavController = self.navigationController;
     
     cell.tweet = self.tweets[indexPath.row];
     
@@ -145,7 +147,7 @@ static BOOL blockNetwork = NO;
         
         
         blockNetwork = YES;
-        [[TwitterClient sharedInstance] getTweets:params WithCompletion:^(NSArray *tweetArray, NSError *error) {
+        [[TwitterClient sharedInstance] getTimeline:@"home" WithParams:params WithCompletion:^(NSArray *tweetArray, NSError *error) {
             if (tweetArray.count) {
 
                 [self.tweets addObjectsFromArray:tweetArray];
@@ -165,7 +167,7 @@ static BOOL blockNetwork = NO;
 
 - (void)onRefresh {
 
-    [[TwitterClient sharedInstance] getTweets: nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
+    [[TwitterClient sharedInstance] getTimeline:@"home" WithParams:nil WithCompletion:^(NSArray *tweetArray, NSError *error) {
         if (tweetArray.count) {
             [self.tweets removeAllObjects];
             self.tweets = [tweetArray mutableCopy];

@@ -40,7 +40,7 @@
     } else {
         LoginViewController *vc = [[LoginViewController alloc] init];
         
-        vc.title = @"Twitter a la Fab";
+        vc.title = @"Twitter a  la Fab";
         
         UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
         
